@@ -37,10 +37,13 @@ bindsym $mod+control+d exec --no-startup-id morc_menu
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ################################################################################################
 
-bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
+#bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
 #bindsym $mod+Ctrl+m exec pavucontrol
+
+bindsym $mod+Shift+n exec --no-startup-id dnd.sh -s
+bindsym $mod+n exec --no-startup-id dnd.sh -e
 
 # Spotify related key bindings
 bindsym $mod+u exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause && py3-cmd refresh spotify
@@ -269,6 +272,7 @@ mode "resize" {
 bindsym $mod+9 exec --no-startup-id blurlock
 
 # Autostart applications
+exec --no-startup-id fcitx
 exec --no-startup-id barrier
 exec --no-startup-id xrandr --output DisplayPort-0 --set TearFree on
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
