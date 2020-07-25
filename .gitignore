@@ -1,2 +1,8 @@
 .tmux/plugins/*
 .tmux/resurrect/*
+*.bak
+obs-studio/*/profiles/*/service.json
+obs-studio/*/logs/
+obs-studio/*/profiler_data/
+obs-studio/*/plugin_config/rtmp-services
+obs-studio/*/plugin_config/text-freetype2/font_data.bin
