@@ -4,8 +4,8 @@
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
 
-# set default desktop layout (default is tiling)
-# workspace_layout tabbed <stacking|tabbed>
+# set default desktop layout (default is tiling, aviable tabbed, stacking)
+workspace_layout tabbed
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 default_border pixel 1
@@ -173,6 +173,9 @@ bindsym $mod+8 workspace $ws8
 # assign [class="Pale moon"] $ws2
 # assign [class="Pcmanfm"] $ws3
 # assign [class="Skype"] $ws5
+assign [class="jetbrains-pycharm"] $ws1
+assign [class="Chromium"] $ws2
+assign [class="URxvt"] $ws3
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -219,7 +222,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+control+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+control+Shift+e exec power.sh
 
 # Set shut down, restart and locking features
 bindsym $mod+0 mode "$mode_system"
@@ -283,6 +286,17 @@ exec --no-startup-id xautolock -time 10 -locker blurlock
 exec --no-startup-id xscreensaver
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
+
+exec --no-startup-id pycharm
+exec --no-startup-id chromium
+exec --no-startup-id urxvt
+exec --no-startup-id skypeforlinux
+exec --no-startup-id discord
+exec --no-startup-id sleep 4 && spotify
+
+exec --no-startup-id i3-msg workspace '1:q' && layout_manager.sh q 
+exec --no-startup-id i3-msg workspace '2:w' && layout_manager.sh w 
+exec --no-startup-id i3-msg workspace '3:e' && layout_manager.sh e 
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -383,7 +397,7 @@ set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
 set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
 bindsym $mod+Shift+g mode "$mode_gaps"
 bindsym $mod+Shift+w mode "move_windows"
-bindsym $mod+Shift+e mode "save_restore"
+bindsym $mod+Shift+e exec --no-startup-id layout_manager.sh
 
 mode "move_windows" {
  bindsym q move container to workspace $ws1; workspace $ws1
@@ -392,13 +406,6 @@ mode "move_windows" {
  bindsym y move container to workspace $ws4; workspace $ws4
  bindsym t move container to workspace $ws5; workspace $ws5
  bindsym y move container to workspace $ws6; workspace $ws6
- bindsym Return mode "default"
- bindsym Escape mode "default"
-}
-
-mode "save_restore" {
- bindsym s exec --no-startup-id i3r save
- bindsym r exec --no-startup-id i3r restore
  bindsym Return mode "default"
  bindsym Escape mode "default"
 }
