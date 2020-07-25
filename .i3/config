@@ -377,6 +377,7 @@ set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
 set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
 bindsym $mod+Shift+g mode "$mode_gaps"
 bindsym $mod+Shift+w mode "move_windows"
+bindsym $mod+Shift+e mode "save_restore"
 
 mode "move_windows" {
  bindsym q move container to workspace $ws1; workspace $ws1
@@ -385,6 +386,13 @@ mode "move_windows" {
  bindsym y move container to workspace $ws4; workspace $ws4
  bindsym t move container to workspace $ws5; workspace $ws5
  bindsym y move container to workspace $ws6; workspace $ws6
+ bindsym Return mode "default"
+ bindsym Escape mode "default"
+}
+
+mode "save_restore" {
+ bindsym s exec --no-startup-id i3r save
+ bindsym r exec --no-startup-id i3r restore
  bindsym Return mode "default"
  bindsym Escape mode "default"
 }

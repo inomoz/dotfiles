@@ -1,0 +1,70 @@
+#!/usr/bin/env bash
+set -e
+IFS=$'\n\t'
+ACTION=${1:save}
+SAVEPATH="$HOME/.i3/i3-resurrect"
+
+DEPS='i3-resurrect
+jq'
+# Check if dependencies are installed, and bail out if they aren't
+for dep in $DEPS; do
+    if $dep --version > /dev/null ; then
+    	true
+    else
+    	echo "$dep is not installed!"
+    	notify-send "i3-resurrect" "$dep is not installed!"
+    	exit 1
+    fi
+done
+
+# i3r
+# this program saves and restores all currently active workspaces with i3-resurrect - 
+# arguments: takes one argument and assumes .i3/i3r is at "~/"
+# expected output: showin what workspace is currently being saved and sends a notification when done
+# example suggested usages:
+#  i3r save
+#  i3r restore
+
+ALLWORKSPACES=$(i3-msg -t get_workspaces)
+
+case $ACTION in
+    restore)
+        #save current workspace
+        CUR_WORKSPACE=$(echo $ALLWORKSPACES | jq -r '.[] | select(.visible == true) | .name')
+
+        # extract workspace name which is defined between two underscored
+        workspaces=$(find $SAVEPATH -type f -iname '*.json' -exec basename {} \; | \
+		     grep -Po '.*_\K(.*)_' | \
+		     sed 's/_//' | \
+		     uniq)
+        echo "Found workspaces: $workspaces"
+    
+        # restore workspaces
+        for ws in ${workspaces[*]}; do
+            echo "restoring $ws"
+            i3-resurrect restore -w $ws &
+        done
+    
+        notify-send "i3-resurrect" "Restored all workspaces"
+        i3-msg workspace $CUR_WORKSPACE
+	;;
+    *)
+        # find running workspaces
+        workspaces=$(echo $ALLWORKSPACES | jq '.[] | .name')
+        echo "Found workspaces: $workspaces"
+
+        # remove old saves
+        rm -f ${SAVEPATH}/*
+
+        # Save workspaces with programs running
+        for ws in ${workspaces[*]}; do
+            # remove quotes from output
+            temp="${ws%\"}"
+            temp="${temp#\"}"
+            echo "saving $temp"
+            i3-resurrect save -w $temp &
+        done
+
+        notify-send "i3-resurrect" "Saved all workspaces"
+	;;
+esac
