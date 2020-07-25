@@ -1,6 +1,6 @@
 # network
 port_range = 7881-7889
-scgi_local = /home/inom/.config/rtorrent/scgi.sock
+#scgi_local = /home/inom/.config/rtorrent/scgi.sock
 encryption = allow_incoming,try_outgoing,enable_retry
 
 # limits
@@ -12,13 +12,13 @@ download_rate = 0
 
 # default dirs
 directory = /home/inom/downloads
-session = /home/inom/.config/rtorrent/session/
+#session = /home/inom/.config/rtorrent/session/
 
 # watch dirs
 schedule = watch_directory_1,5,5,"load_start=/home/noclaf/tor/waf/*.torrent,d.set_directory=/home/inom/downloads/video/"
 
 # on finish hook
-system.method.set_key = event.download.finished,notify_me,"execute=/home/inom/.local/bin/torrentsdone,$d.get_name="
+#system.method.set_key = event.download.finished,notify_me,"execute=/home/inom/.local/bin/torrentsdone,$d.get_name="
 
 
 # vim: set ft=cfg :
