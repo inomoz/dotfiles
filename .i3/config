@@ -31,7 +31,7 @@ bindsym $mod+shift+q kill
 bindsym $mod+control+shift+d exec --no-startup-id rofi -show combi
 
 # launch categorized menu
-bindsym $mod+z exec --no-startup-id morc_menu
+bindsym $mod+control+d exec --no-startup-id morc_menu
 
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
@@ -199,12 +199,18 @@ for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
 for_window [class="Simple-scan"] floating enable border normal
 for_window [class="(?i)System-config-printer.py"] floating enable border normal
 for_window [class="Skype"] floating enable border normal
+for_window [class="discord"] floating enable border normal
+for_window [class="Spotify"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
+bindsym $mod+s exec --no-startup-id skypeforlinux
+bindsym $mod+d exec --no-startup-id discord
+bindsym $mod+z exec --no-startup-id "activate-chromium-tab.sh 1"
+bindsym $mod+control+z exec --no-startup-id "activate-chromium-tab.sh 2"
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -260,7 +266,7 @@ mode "resize" {
 bindsym $mod+9 exec --no-startup-id blurlock
 
 # Autostart applications
-exec --no-startup-id grabc
+exec --no-startup-id barrier
 exec --no-startup-id xrandr --output DisplayPort-0 --set TearFree on
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; picom -b
@@ -321,7 +327,7 @@ bar {
 
 	bindsym button4 nop
 	bindsym button5 nop
-#   font xft:URWGothic-Book 11
+        font xft:Iosevka Nerd Font 10
 	strip_workspace_numbers yes
 
     colors {
