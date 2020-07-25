@@ -6,7 +6,7 @@ pamac upgrade -a
 
 mkdir -p ~/downloads/video ~/.local/bin
 
-pamac install --no-confirm bash-completion tmux neovim rtorrent git tmux inkscape telegram-desktop pavucontrol discord
+pamac install --no-confirm bash-completion rofi tmux neovim rtorrent git tmux inkscape telegram-desktop pavucontrol discord
 
 pamac install --no-confirm xscreensaver
 

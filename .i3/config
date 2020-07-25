@@ -33,7 +33,7 @@ bindsym $mod+Return exec terminal
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id dmenu_recency
+bindsym $mod+control+shift+d exec --no-startup-id rofi -show combi
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -42,8 +42,6 @@ bindsym $mod+z exec --no-startup-id morc_menu
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ################################################################################################
 
-exec --no-startup-id volumeicon
-exec --no-startup-id xrandr --output DisplayPort-0 --set TearFree on
 bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
@@ -273,6 +271,7 @@ mode "resize" {
 bindsym $mod+9 exec --no-startup-id blurlock
 
 # Autostart applications
+exec --no-startup-id xrandr --output DisplayPort-0 --set TearFree on
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 #exec --no-startup-id manjaro-hello
