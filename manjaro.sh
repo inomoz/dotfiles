@@ -4,4 +4,8 @@
 # Update system
 pamac upgrade -a
 
-pamac install bash-completion 
+mkdir -p ~/downloads/video ~/.local/bin
+
+pamac install --no-confirm bash-completion neovim rtorrent 
+
+pamac install --no-confirm xscreensaver
