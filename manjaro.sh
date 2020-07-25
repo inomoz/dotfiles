@@ -10,7 +10,7 @@ pamac install --no-confirm bash-completion tmux neovim rtorrent git tmux inkscap
 
 pamac install --no-confirm xscreensaver
 
-# pamac install --no-confirm chromium-vaapi
+# pamac install nerd-fonts-iosevka chromium-vaapi
 
 # tmux plugin manager
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm 2> /dev/null
