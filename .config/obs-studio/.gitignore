@@ -1,0 +1,6 @@
+*.bak
+/basic/profiles/*/service.json
+/logs/
+/profiler_data/
+/plugin_config/rtmp-services
+/plugin_config/text-freetype2/font_data.bin
