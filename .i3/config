@@ -22,7 +22,7 @@ font xft:Iosevka Nerd Font 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminal
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+shift+q kill
@@ -178,7 +178,7 @@ bindsym $mod+8 workspace $ws8
 # assign [class="Skype"] $ws5
 assign [class="jetbrains-pycharm"] $ws1
 assign [class="Chromium"] $ws2
-assign [class="URxvt"] $ws3
+assign [class="alacritty"] $ws3
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -294,7 +294,7 @@ exec_always --no-startup-id fix_xcursor
 
 exec --no-startup-id pycharm
 exec --no-startup-id chromium
-exec --no-startup-id urxvt
+exec --no-startup-id alacritty
 exec --no-startup-id skypeforlinux
 exec --no-startup-id discord
 exec --no-startup-id sleep 4 && spotify
