@@ -84,10 +84,10 @@ bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 # focus_follows_mouse no
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym mod1+control+h focus left
+bindsym mod1+control+j focus down
+bindsym mod1+control+k focus up
+bindsym mod1+control+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -204,9 +204,9 @@ for_window [class="qt5ct"] floating enable sticky enable border normal
 for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
 for_window [class="Simple-scan"] floating enable border normal
 for_window [class="(?i)System-config-printer.py"] floating enable border normal
-for_window [class="Skype"] floating enable border normal
-for_window [class="discord"] floating enable border normal
-for_window [class="Spotify"] floating enable border normal
+for_window [class="Skype"] floating enable border normal; resize set 2200 1420; move position 0 690
+for_window [class="discord"] floating enable border normal; resize set 2200 1420; move position 0 690
+for_window [class="Spotify"] floating enable border normal; resize set 2200 1420; move position 1640 690
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
@@ -273,6 +273,7 @@ bindsym $mod+9 exec --no-startup-id blurlock
 
 # Autostart applications
 exec --no-startup-id fcitx
+exec --no-startup-id keynav
 exec --no-startup-id barrier
 exec --no-startup-id xrandr --output DisplayPort-0 --set TearFree on
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1

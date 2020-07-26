@@ -179,13 +179,13 @@
     context = ctrl+mod1+c
 
 [urgency_low]
-    background = "#282828"
-    foreground = "#ebdbb2"
+    background = "#263135"
+    foreground = "#A6A6A6"
     timeout = 3
 
 [urgency_normal]
-    background = "#282828"
-    foreground = "#ebdbb2"
+    background = "#263135"
+    foreground = "#A6A6A6"
     timeout = 3
 
 [urgency_critical]
