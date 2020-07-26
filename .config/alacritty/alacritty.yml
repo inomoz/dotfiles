@@ -87,16 +87,16 @@
   #multiplier: 3
 
 # Font configuration
-#font:
+font:
   # Normal (roman) font face
-  #normal:
+  normal:
     # Font family
     #
     # Default:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    #family: monospace
+    family: Iosevka Nerd Font
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
@@ -135,7 +135,7 @@
     #style: Bold Italic
 
   # Point size
-  #size: 11.0
+  size: 13.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -158,7 +158,6 @@
 
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
-
 
 # Colors (Material Theme)
 colors:
@@ -188,6 +187,7 @@ colors:
     magenta: '0x6c71c4'
     cyan:    '0x35434d'
     white:   '0xffffff'
+
 
 # Colors (Tomorrow Night)
 #colors:
