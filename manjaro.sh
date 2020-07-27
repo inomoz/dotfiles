@@ -15,4 +15,3 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm 2> /dev/null
 sudo gpasswd -a inom docker
 sudo systemctl enable docker
 
-
