@@ -104,7 +104,6 @@ alias vi='nvim'
 alias mux='pgrep -vx tmux > /dev/null && tmux new -d -s delete-me && tmux run-shell ~/.tmux/plugins/tmux-resurrect/scripts/restore.sh && tmux kill-session -t delete-me && tmux attach || tmux attach'
 alias translate='trans -shell -brief :ru+en'
 
-
 xhost +local:root > /dev/null 2>&1
 
 complete -cf sudo
@@ -154,3 +153,6 @@ unset config
 
 . /usr/share/fzf/key-bindings.bash
 . /usr/share/fzf/completion.bash
+
+export FZF_DEFAULT_COMMAND="rg --files --no-ignore --hidden --follow -g '!{.git,node_modules}/*'"
+
