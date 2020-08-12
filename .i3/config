@@ -206,7 +206,7 @@ for_window [class="Simple-scan"] floating enable border normal
 for_window [class="(?i)System-config-printer.py"] floating enable border normal
 for_window [class="Skype"] floating enable border normal; resize set 2200 1420; move position 0 690
 for_window [class="discord"] floating enable border normal; resize set 2200 1420; move position 0 690
-for_window [class="Spotify"] floating enable border normal; resize set 2200 1420; move position 1640 690
+for_window [class="Spotify"] floating enable border normal; resize set 2200 1420; move position 1640 690; move scratchpad
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
@@ -277,7 +277,7 @@ exec --no-startup-id keynav
 exec --no-startup-id barrier
 exec --no-startup-id xrandr --output DisplayPort-0 --set TearFree on
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id nitrogen --restore; sleep 1; picom -b
+exec --no-startup-id picom -b
 #exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
@@ -296,9 +296,9 @@ exec --no-startup-id skypeforlinux
 exec --no-startup-id discord
 exec --no-startup-id sleep 4 && spotify
 
-exec --no-startup-id i3-msg workspace '1:q' && layout_manager.sh q 
-exec --no-startup-id i3-msg workspace '2:w' && layout_manager.sh w 
-exec --no-startup-id i3-msg workspace '3:e' && layout_manager.sh e 
+exec --no-startup-id i3-msg workspace '1:q' && layout_manager.sh q
+exec --no-startup-id i3-msg workspace '2:w' && layout_manager.sh w
+exec --no-startup-id i3-msg workspace '3:e' && layout_manager.sh e
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -306,7 +306,7 @@ exec --no-startup-id i3-msg workspace '3:e' && layout_manager.sh e
 # Change the variable name at the place you want to match the color
 # of your terminal like this:
 # [example]
-# If you want your bar to have the same background color as your 
+# If you want your bar to have the same background color as your
 # terminal background change the line 362 from:
 # background #14191D
 # to:
@@ -369,7 +369,7 @@ bindsym $mod+m bar mode toggle
   client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
   client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
   client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
-  client.placeholder      #000000 #0c0c0c #ffffff #000000 
+  client.placeholder      #000000 #0c0c0c #ffffff #000000
 
   client.background       #2B2C2B
 
@@ -379,7 +379,7 @@ bindsym $mod+m bar mode toggle
 
 # Set inner/outer gaps
 gaps inner 2
-gaps outer 0 
+gaps outer 0
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
@@ -389,7 +389,7 @@ gaps outer 0
 # Smart gaps (gaps used if only more than one container on the workspace)
 smart_gaps on
 
-# Smart borders (draw borders around container only if it is not the only container on this workspace) 
+# Smart borders (draw borders around container only if it is not the only container on this workspace)
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
 smart_borders on
 
