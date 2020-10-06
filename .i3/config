@@ -47,12 +47,12 @@ bindsym $mod+n exec --no-startup-id dnd.sh -e
 
 # Spotify related key bindings
 bindsym $mod+u exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause && py3-cmd refresh spotify
-bindsym $mod+shift+i exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous && py3-cmd refresh spotify
-bindsym $mod+i exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next && py3-cmd refresh spotify
+bindsym $mod+shift+o exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous && py3-cmd refresh spotify
+bindsym $mod+o exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next && py3-cmd refresh spotify
 
 # Sound control
-bindsym $mod+o exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +4% && $refresh_i3status
-bindsym $mod+shift+o exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -4% && $refresh_i3status
+bindsym $mod+i exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +4% && $refresh_i3status
+bindsym $mod+shift+i exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -4% && $refresh_i3status
 bindsym $mod+control+u exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym $mod+control+i exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status_mic
 
