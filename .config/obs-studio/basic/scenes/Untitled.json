@@ -14,7 +14,7 @@
         "id": "pulse_input_capture",
         "mixers": 255,
         "monitoring_type": 0,
-        "muted": true,
+        "muted": false,
         "name": "Mic/Aux",
         "prev_ver": 419430408,
         "private_settings": {},
@@ -27,7 +27,7 @@
         },
         "sync": 0,
         "versioned_id": "pulse_input_capture",
-        "volume": 0.85624873638153076
+        "volume": 0.94880598783493042
     },
     "DesktopAudioDevice1": {
         "balance": 0.5,
@@ -126,10 +126,35 @@
             "deinterlace_mode": 0,
             "enabled": true,
             "flags": 0,
+            "hotkeys": {},
+            "id": "xcomposite_input",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Window Capture (Xcomposite)",
+            "prev_ver": 419430408,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {},
+            "sync": 0,
+            "versioned_id": "xcomposite_input",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
                 "libobs.hide_scene_item.Screen Capture (XSHM)": [],
-                "libobs.show_scene_item.Screen Capture (XSHM)": []
+                "libobs.hide_scene_item.Window Capture (Xcomposite)": [],
+                "libobs.show_scene_item.Screen Capture (XSHM)": [],
+                "libobs.show_scene_item.Window Capture (Xcomposite)": []
             },
             "id": "scene",
             "mixers": 0,
@@ -144,7 +169,7 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 2,
+                "id_counter": 3,
                 "items": [
                     {
                         "align": 5,
@@ -162,6 +187,35 @@
                         "id": 2,
                         "locked": false,
                         "name": "Screen Capture (XSHM)",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": false
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 3,
+                        "locked": false,
+                        "name": "Window Capture (Xcomposite)",
                         "pos": {
                             "x": 0.0,
                             "y": 0.0
