@@ -113,5 +113,5 @@ run_watch DUNST {
 tztime local {
 #	format = " %h-%d %H:%M ☰ "
 	# termsyn font
-	format = "  %h-%d %H:%M"
+	format = "  %h-%d %a %H:%M"
 }

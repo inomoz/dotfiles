@@ -10,16 +10,13 @@ application/x-extension-shtml=chromium.desktop
 application/xhtml+xml=chromium.desktop
 application/x-extension-xhtml=chromium.desktop
 application/x-extension-xht=chromium.desktop
-
 image/jpeg=sxiv.desktop;gpicview.desktop;
 image/png=sxiv.desktop
 text/plain=nvim-qt.desktop
-
-x-scheme-handler/mailto=exo-mail-reader.desktop
+x-scheme-handler/mailto=userapp-Evolution-2HLIS0.desktop
 message/rfc822=userapp-Thunderbird.desktop
 application/pdf=org.pwmt.zathura.desktop
 application/x-bittorrent=deluge.desktop
-
 application/arj=xarchiver.desktop;
 multipart/x-zip=xarchiver.desktop;
 application/deb=xarchiver.desktop;
@@ -39,7 +36,6 @@ application/x-rar-compressed=xarchiver.desktop;
 application/x-tar=xarchiver.desktop;
 application/x-zip=xarchiver.desktop;
 application/x-zip-compressed=xarchiver.desktop;
-
 application/x-hwp=libreoffice-writer.desktop;
 text/csv=libreoffice-calc.desktop;
 text/rtf=libreoffice-writer.desktop;
@@ -96,9 +92,7 @@ application/vnd.sun.xml.writer.template=libreoffice-writer.desktop;
 application/vnd.visio=libreoffice-draw.desktop;
 application/vnd.wordperfect=libreoffice-writer.desktop;
 application/wordperfect=libreoffice-writer.desktop;
-
 x-scheme-handler/steam=steam.desktop;
-
 x-scheme-handler/mms=mpv.desktop;
 misc/ultravox=mpv.desktop;
 x-scheme-handler/rtmp=mpv.desktop;
@@ -161,7 +155,6 @@ audio/x-scpls=mpv.desktop;
 audio/x-vorbis+ogg=mpv.desktop;
 audio/x-wav=mpv.desktop;
 image/vnd.rn-realpix=mpv.desktop;
-
 image/bmp=sxiv.desktop;gimp.desktop;
 image/g3fax=gimp.desktop;
 image/gif=sxiv.desktop;firefox.desktop;gimp.desktop;
@@ -193,9 +186,7 @@ image/x-xcf=gimp.desktop;
 image/x-xcursor=gimp.desktop;
 image/x-xpixmap=sxiv.desktop;gimp.desktop;
 image/x-xwindowdump=gimp.desktop;mage/tiff=sxiv.desktop;gimp.desktop;
-
 inode/directory=pcmanfm.desktop;
-
 
 [Added Associations]
 x-scheme-handler/http=chromium.desktop;
@@ -209,5 +200,6 @@ application/x-extension-shtml=chromium.desktop;
 application/xhtml+xml=chromium.desktop;
 application/x-extension-xhtml=chromium.desktop;
 application/x-extension-xht=chromium.desktop;
-x-scheme-handler/mailto=chromium.desktop;
+x-scheme-handler/mailto=chromium.desktop;userapp-Evolution-2HLIS0.desktop;
 message/rfc822=chromium.desktop;
+image/png=org.kde.krita.desktop;

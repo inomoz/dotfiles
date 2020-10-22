@@ -206,7 +206,7 @@ for_window [class="qt5ct"] floating enable sticky enable border normal
 for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
 for_window [class="Simple-scan"] floating enable border normal
 for_window [class="(?i)System-config-printer.py"] floating enable border normal
-#for_window [class="Skype"] floating enable border normal; resize set 2200 1420; move position 0 690
+for_window [class="mpv"] floating enable border normal; resize set 2200 1420; move position 0 690
 #for_window [class="discord"] floating enable border normal; resize set 2200 1420; move position 0 690
 #for_window [class="Spotify"] floating enable border normal; resize set 2200 1420; move position 1640 690; move scratchpad
 for_window [class="Timeset-gui"] floating enable border normal
@@ -350,7 +350,7 @@ bar {
 
     colors {
         background #222D31
-        statusline $term_color2
+        statusline $term_color10
         separator  #454947
 
 #                      border  backgr. text
