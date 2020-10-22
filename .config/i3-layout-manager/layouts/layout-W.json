@@ -4,14 +4,14 @@
 		"floating": "auto_off",
 		"fullscreen_mode": 0,
 		"layout": "splith",
-		"percent": null,
+		"percent": 0.125,
 		"type": "con",
 		"nodes": [
 			{
 				"border": "pixel",
 				"floating": "auto_off",
 				"layout": "splitv",
-				"percent": 0.75,
+				"percent": 0.710677083333333,
 				"type": "con",
 				"nodes": [
 					{
@@ -57,7 +57,7 @@
 											"x": 2718,
 											"y": 4
 										},
-										"name": "Inbox (718 unread) — Evolution",
+										"name": "Inbox (715 unread) — Evolution",
 										"percent": 0.5,
 										"swallows": [
 											{
@@ -76,7 +76,7 @@
 				"border": "pixel",
 				"floating": "auto_off",
 				"layout": "tabbed",
-				"percent": 0.25,
+				"percent": 0.289322916666667,
 				"type": "con",
 				"nodes": [
 					{
@@ -117,8 +117,8 @@
 															"x": 0,
 															"y": 0
 														},
-														"name": "Alan Silvestri - Portals",
-														"percent": 0.5,
+														"name": "Vector Seven - Hydraulic",
+														"percent": 0.480816714150048,
 														"swallows": [
 															{
 																"instance": "^spotify$"
@@ -137,7 +137,7 @@
 															"y": 1060
 														},
 														"name": "Inomoz_ultra - KeePassXC",
-														"percent": 0.5,
+														"percent": 0.519183285849953,
 														"swallows": [
 															{
 																"instance": "^keepassxc$"
