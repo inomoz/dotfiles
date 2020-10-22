@@ -82,6 +82,8 @@ bindsym $mod+control+c --release exec --no-startup-id "maim -st 0 | convert - -r
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 # focus_follows_mouse no
+focus_on_window_activation focus
+no_focus [window_role="pop-up"]
 
 # change focus
 bindsym mod1+control+h focus left
