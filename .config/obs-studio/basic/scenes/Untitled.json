@@ -127,22 +127,20 @@
             "enabled": true,
             "flags": 0,
             "hotkeys": {},
-            "id": "xcomposite_input",
+            "id": "xshm_input",
             "mixers": 0,
             "monitoring_type": 0,
             "muted": false,
-            "name": "Chromium",
+            "name": "Desktop",
             "prev_ver": 419430408,
             "private_settings": {},
             "push-to-mute": false,
             "push-to-mute-delay": 0,
             "push-to-talk": false,
             "push-to-talk-delay": 0,
-            "settings": {
-                "capture_window": "46137345\r\nSalesloop - Sales Automation - Chromium\r\nchromium"
-            },
+            "settings": {},
             "sync": 0,
-            "versioned_id": "xcomposite_input",
+            "versioned_id": "xshm_input",
             "volume": 1.0
         },
         {
@@ -229,7 +227,7 @@
                             "y": 1.0
                         },
                         "scale_filter": "disable",
-                        "visible": true
+                        "visible": false
                     }
                 ]
             },
@@ -244,20 +242,22 @@
             "enabled": true,
             "flags": 0,
             "hotkeys": {},
-            "id": "xshm_input",
+            "id": "xcomposite_input",
             "mixers": 0,
             "monitoring_type": 0,
             "muted": false,
-            "name": "Desktop",
+            "name": "Chromium",
             "prev_ver": 419430408,
             "private_settings": {},
             "push-to-mute": false,
             "push-to-mute-delay": 0,
             "push-to-talk": false,
             "push-to-talk-delay": 0,
-            "settings": {},
+            "settings": {
+                "capture_window": "46137345\r\nSalesloop - Sales Automation - Chromium\r\nchromium"
+            },
             "sync": 0,
-            "versioned_id": "xshm_input",
+            "versioned_id": "xcomposite_input",
             "volume": 1.0
         }
     ],
