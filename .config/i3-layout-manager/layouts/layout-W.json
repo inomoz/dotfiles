@@ -10,15 +10,15 @@
 			{
 				"border": "pixel",
 				"floating": "auto_off",
-				"layout": "splitv",
-				"percent": 0.710677083333333,
+				"layout": "splith",
+				"percent": 1,
 				"type": "con",
 				"nodes": [
 					{
 						"border": "pixel",
 						"floating": "auto_off",
-						"layout": "tabbed",
-						"percent": 1,
+						"layout": "splitv",
+						"percent": 0.739322916666666,
 						"type": "con",
 						"nodes": [
 							{
@@ -30,60 +30,60 @@
 								"nodes": [
 									{
 										"border": "pixel",
-										"current_border_width": 2,
 										"floating": "auto_off",
-										"geometry": {
-											"height": 702,
-											"width": 3836,
-											"x": 2,
-											"y": 1410
-										},
-										"name": "New Tab - Chromium",
-										"percent": 0.5,
-										"swallows": [
+										"layout": "tabbed",
+										"percent": 1,
+										"type": "con",
+										"nodes": [
 											{
-												"instance": "^chromium$"
-											}
-										],
-										"type": "con"
-									},
-									{
-										"border": "pixel",
-										"current_border_width": 2,
-										"floating": "auto_off",
-										"geometry": {
-											"height": 2102,
-											"width": 1114,
-											"x": 2718,
-											"y": 4
-										},
-										"name": "Inbox (715 unread) — Evolution",
-										"percent": 0.5,
-										"swallows": [
+												"border": "pixel",
+												"current_border_width": 2,
+												"floating": "auto_off",
+												"geometry": {
+													"height": 2062,
+													"width": 2720,
+													"x": 6,
+													"y": 46
+												},
+												"name": "New Tab - Chromium",
+												"percent": 0.5,
+												"swallows": [
+													{
+														"instance": "^chromium$"
+													}
+												],
+												"type": "con"
+											},
 											{
-												"instance": "^evolution$"
+												"border": "pixel",
+												"current_border_width": 2,
+												"floating": "auto_off",
+												"geometry": {
+													"height": 2102,
+													"width": 1114,
+													"x": 2718,
+													"y": 4
+												},
+												"name": "Inbox (699 unread) — Evolution",
+												"percent": 0.5,
+												"swallows": [
+													{
+														"instance": "^evolution$"
+													}
+												],
+												"type": "con"
 											}
-										],
-										"type": "con"
+										]
 									}
 								]
 							}
 						]
-					}
-				]
-			},
-			{
-				"border": "pixel",
-				"floating": "auto_off",
-				"layout": "tabbed",
-				"percent": 0.289322916666667,
-				"type": "con",
-				"nodes": [
+					},
 					{
 						"border": "pixel",
 						"floating": "auto_off",
 						"layout": "tabbed",
-						"percent": 1,
+						"percent": 0.260677083333334,
 						"type": "con",
 						"nodes": [
 							{
@@ -103,47 +103,65 @@
 											{
 												"border": "pixel",
 												"floating": "auto_off",
-												"layout": "splitv",
+												"layout": "tabbed",
 												"percent": 1,
 												"type": "con",
 												"nodes": [
 													{
 														"border": "pixel",
-														"current_border_width": 2,
 														"floating": "auto_off",
-														"geometry": {
-															"height": 600,
-															"width": 800,
-															"x": 0,
-															"y": 0
-														},
-														"name": "Vector Seven - Hydraulic",
-														"percent": 0.480816714150048,
-														"swallows": [
+														"layout": "tabbed",
+														"percent": 1,
+														"type": "con",
+														"nodes": [
 															{
-																"instance": "^spotify$"
-															}
-														],
-														"type": "con"
-													},
-													{
-														"border": "pixel",
-														"current_border_width": 2,
-														"floating": "auto_off",
-														"geometry": {
-															"height": 1134,
-															"width": 1600,
-															"x": 2884,
-															"y": 1060
-														},
-														"name": "Inomoz_ultra - KeePassXC",
-														"percent": 0.519183285849953,
-														"swallows": [
+																"border": "pixel",
+																"floating": "auto_off",
+																"layout": "splitv",
+																"percent": 0.480816714150048,
+																"type": "con",
+																"nodes": [
+																	{
+																		"border": "pixel",
+																		"current_border_width": 2,
+																		"floating": "auto_off",
+																		"geometry": {
+																			"height": 600,
+																			"width": 800,
+																			"x": 0,
+																			"y": 0
+																		},
+																		"name": "Detsl aka Le Truk - Вечеринка у Децла (feat. Маруся)",
+																		"percent": 1,
+																		"swallows": [
+																			{
+																				"instance": "^spotify$"
+																			}
+																		],
+																		"type": "con"
+																	}
+																]
+															},
 															{
-																"instance": "^keepassxc$"
+																"border": "pixel",
+																"current_border_width": 2,
+																"floating": "auto_off",
+																"geometry": {
+																	"height": 1134,
+																	"width": 1600,
+																	"x": 2884,
+																	"y": 1060
+																},
+																"name": "Inomoz_ultra - KeePassXC",
+																"percent": 0.519183285849952,
+																"swallows": [
+																	{
+																		"instance": "^keepassxc$"
+																	}
+																],
+																"type": "con"
 															}
-														],
-														"type": "con"
+														]
 													}
 												]
 											}

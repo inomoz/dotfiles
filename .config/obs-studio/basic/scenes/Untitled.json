@@ -14,7 +14,7 @@
         "id": "pulse_input_capture",
         "mixers": 255,
         "monitoring_type": 0,
-        "muted": false,
+        "muted": true,
         "name": "Mic/Aux",
         "prev_ver": 419430408,
         "private_settings": {},
@@ -27,7 +27,7 @@
         },
         "sync": 0,
         "versioned_id": "pulse_input_capture",
-        "volume": 0.94880598783493042
+        "volume": 1.0
     },
     "DesktopAudioDevice1": {
         "balance": 0.5,
@@ -127,11 +127,11 @@
             "enabled": true,
             "flags": 0,
             "hotkeys": {},
-            "id": "xcomposite_input",
+            "id": "xshm_input",
             "mixers": 0,
             "monitoring_type": 0,
             "muted": false,
-            "name": "Window Capture (Xcomposite)",
+            "name": "Screen Capture (XSHM)",
             "prev_ver": 419430408,
             "private_settings": {},
             "push-to-mute": false,
@@ -140,7 +140,7 @@
             "push-to-talk-delay": 0,
             "settings": {},
             "sync": 0,
-            "versioned_id": "xcomposite_input",
+            "versioned_id": "xshm_input",
             "volume": 1.0
         },
         {
@@ -203,11 +203,11 @@
                     {
                         "align": 5,
                         "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
+                            "x": 1920.0,
+                            "y": 1080.0
                         },
                         "bounds_align": 0,
-                        "bounds_type": 0,
+                        "bounds_type": 2,
                         "crop_bottom": 0,
                         "crop_left": 0,
                         "crop_right": 0,
@@ -242,20 +242,22 @@
             "enabled": true,
             "flags": 0,
             "hotkeys": {},
-            "id": "xshm_input",
+            "id": "xcomposite_input",
             "mixers": 0,
             "monitoring_type": 0,
             "muted": false,
-            "name": "Screen Capture (XSHM)",
+            "name": "Window Capture (Xcomposite)",
             "prev_ver": 419430408,
             "private_settings": {},
             "push-to-mute": false,
             "push-to-mute-delay": 0,
             "push-to-talk": false,
             "push-to-talk-delay": 0,
-            "settings": {},
+            "settings": {
+                "capture_window": "46137345\r\nSalesloop - Sales Automation - Chromium\r\nchromium"
+            },
             "sync": 0,
-            "versioned_id": "xshm_input",
+            "versioned_id": "xcomposite_input",
             "volume": 1.0
         }
     ],
