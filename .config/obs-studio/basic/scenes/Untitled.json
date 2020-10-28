@@ -59,8 +59,8 @@
         "versioned_id": "pulse_output_capture",
         "volume": 1.0
     },
-    "current_program_scene": "Scene",
-    "current_scene": "Scene",
+    "current_program_scene": "Main Scene",
+    "current_scene": "Main Scene",
     "current_transition": "Fade",
     "groups": [],
     "modules": {
@@ -116,7 +116,7 @@
     "scaling_off_y": 0.0,
     "scene_order": [
         {
-            "name": "Scene"
+            "name": "Main Scene"
         }
     ],
     "sources": [
@@ -127,20 +127,22 @@
             "enabled": true,
             "flags": 0,
             "hotkeys": {},
-            "id": "xshm_input",
+            "id": "xcomposite_input",
             "mixers": 0,
             "monitoring_type": 0,
             "muted": false,
-            "name": "Screen Capture (XSHM)",
+            "name": "Chromium",
             "prev_ver": 419430408,
             "private_settings": {},
             "push-to-mute": false,
             "push-to-mute-delay": 0,
             "push-to-talk": false,
             "push-to-talk-delay": 0,
-            "settings": {},
+            "settings": {
+                "capture_window": "46137345\r\nSalesloop - Sales Automation - Chromium\r\nchromium"
+            },
             "sync": 0,
-            "versioned_id": "xshm_input",
+            "versioned_id": "xcomposite_input",
             "volume": 1.0
         },
         {
@@ -151,16 +153,16 @@
             "flags": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
-                "libobs.hide_scene_item.Screen Capture (XSHM)": [],
-                "libobs.hide_scene_item.Window Capture (Xcomposite)": [],
-                "libobs.show_scene_item.Screen Capture (XSHM)": [],
-                "libobs.show_scene_item.Window Capture (Xcomposite)": []
+                "libobs.hide_scene_item.Chromium": [],
+                "libobs.hide_scene_item.Desktop": [],
+                "libobs.show_scene_item.Chromium": [],
+                "libobs.show_scene_item.Desktop": []
             },
             "id": "scene",
             "mixers": 0,
             "monitoring_type": 0,
             "muted": false,
-            "name": "Scene",
+            "name": "Main Scene",
             "prev_ver": 419430408,
             "private_settings": {},
             "push-to-mute": false,
@@ -186,7 +188,7 @@
                         "group_item_backup": false,
                         "id": 2,
                         "locked": false,
-                        "name": "Screen Capture (XSHM)",
+                        "name": "Desktop",
                         "pos": {
                             "x": 0.0,
                             "y": 0.0
@@ -215,7 +217,7 @@
                         "group_item_backup": false,
                         "id": 3,
                         "locked": false,
-                        "name": "Window Capture (Xcomposite)",
+                        "name": "Chromium",
                         "pos": {
                             "x": 0.0,
                             "y": 0.0
@@ -242,22 +244,20 @@
             "enabled": true,
             "flags": 0,
             "hotkeys": {},
-            "id": "xcomposite_input",
+            "id": "xshm_input",
             "mixers": 0,
             "monitoring_type": 0,
             "muted": false,
-            "name": "Window Capture (Xcomposite)",
+            "name": "Desktop",
             "prev_ver": 419430408,
             "private_settings": {},
             "push-to-mute": false,
             "push-to-mute-delay": 0,
             "push-to-talk": false,
             "push-to-talk-delay": 0,
-            "settings": {
-                "capture_window": "46137345\r\nSalesloop - Sales Automation - Chromium\r\nchromium"
-            },
+            "settings": {},
             "sync": 0,
-            "versioned_id": "xcomposite_input",
+            "versioned_id": "xshm_input",
             "volume": 1.0
         }
     ],

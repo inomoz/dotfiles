@@ -1,4 +1,4 @@
 {
     "bitrate": 8000,
-    "rate_control": "CBR"
+    "level": 42
 }
