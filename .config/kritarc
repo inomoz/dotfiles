@@ -449,11 +449,13 @@ File2[$e]=$HOME/notes/media/scribble-476817539.png
 File3[$e]=$HOME/notes/media/scribble-1877180170.png
 File4[$e]=$HOME/notes/media/scribble-291500905.png
 File5[$e]=$HOME/notes/media/scribble-727330111.png
+File6[$e]=$HOME/downloads/image.png
 Name1[$e]=pnggrad16rgb.png
 Name2[$e]=scribble-476817539.png
 Name3[$e]=scribble-1877180170.png
 Name4[$e]=scribble-291500905.png
 Name5[$e]=scribble-727330111.png
+Name6[$e]=image.png
 
 [SvgSymbolCollection]
 currentCollection=0

@@ -2,7 +2,6 @@
 	{
 		"border": "pixel",
 		"floating": "auto_off",
-		"fullscreen_mode": 0,
 		"layout": "splith",
 		"percent": 1,
 		"type": "con",
@@ -31,11 +30,30 @@
 									"x": 0,
 									"y": 0
 								},
-								"name": "john_linkedin",
-								"percent": 0.5,
+								"name": "john_linkedin – salesloop._proxies [salesloop…zonaws.com]",
+								"percent": 0.333333333333333,
 								"swallows": [
 									{
 										"instance": "^jetbrains-pycharm$"
+									}
+								],
+								"type": "con"
+							},
+							{
+								"border": "pixel",
+								"current_border_width": 2,
+								"floating": "auto_off",
+								"geometry": {
+									"height": 2160,
+									"width": 3840,
+									"x": 0,
+									"y": 0
+								},
+								"name": "Blender",
+								"percent": 0.333333333333333,
+								"swallows": [
+									{
+										"instance": "^Blender$"
 									}
 								],
 								"type": "con"
@@ -50,11 +68,11 @@
 									"x": 0,
 									"y": 42
 								},
-								"name": "Welcome to QOwnNotes - default - QOwnNotes - 20.7.6",
-								"percent": 0.5,
+								"name": "  — Krita",
+								"percent": 0.333333333333333,
 								"swallows": [
 									{
-										"instance": "^QOwnNotes$"
+										"instance": "^krita$"
 									}
 								],
 								"type": "con"
@@ -65,4 +83,6 @@
 			}
 		]
 	}
+]
+}
 ]

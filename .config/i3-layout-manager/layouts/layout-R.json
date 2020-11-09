@@ -24,79 +24,32 @@
 							{
 								"border": "pixel",
 								"floating": "auto_off",
-								"layout": "tabbed",
-								"percent": 0.425520833333334,
-								"type": "con",
-								"nodes": [
-									{
-										"border": "normal",
-										"current_border_width": 4,
-										"floating": "user_off",
-										"geometry": {
-											"height": 1320,
-											"width": 920,
-											"x": 1460,
-											"y": 420
-										},
-										"name": "Skype",
-										"percent": 1,
-										"swallows": [
-											{
-												"instance": "^skype$"
-											}
-										],
-										"type": "con"
-									}
-								]
-							},
-							{
-								"border": "pixel",
-								"floating": "auto_off",
-								"layout": "tabbed",
-								"percent": 0.574479166666666,
+								"layout": "splith",
+								"percent": 1,
 								"type": "con",
 								"nodes": [
 									{
 										"border": "pixel",
 										"floating": "auto_off",
-										"layout": "splitv",
-										"percent": 0.5,
+										"layout": "tabbed",
+										"percent": 0.497395833333334,
 										"type": "con",
 										"nodes": [
 											{
-												"border": "pixel",
-												"current_border_width": 2,
-												"floating": "auto_off",
+												"border": "normal",
+												"current_border_width": 4,
+												"floating": "user_off",
 												"geometry": {
-													"height": 2072,
-													"width": 3840,
-													"x": 0,
-													"y": 42
+													"height": 1320,
+													"width": 920,
+													"x": 1460,
+													"y": 420
 												},
-												"name": "@NoneName - Discord",
-												"percent": 0.621124031007752,
+												"name": "Skype",
+												"percent": 1,
 												"swallows": [
 													{
-														"instance": "^discord$"
-													}
-												],
-												"type": "con"
-											},
-											{
-												"border": "none",
-												"current_border_width": 2,
-												"floating": "auto_off",
-												"geometry": {
-													"height": 701,
-													"width": 1700,
-													"x": 2136,
-													"y": 706
-												},
-												"name": "Telegram",
-												"percent": 0.378875968992248,
-												"swallows": [
-													{
-														"instance": "^telegram-desktop$"
+														"instance": "^skype$"
 													}
 												],
 												"type": "con"
@@ -106,47 +59,65 @@
 									{
 										"border": "pixel",
 										"floating": "auto_off",
-										"layout": "splitv",
-										"percent": 0.5,
+										"layout": "tabbed",
+										"percent": 0.502604166666666,
 										"type": "con",
 										"nodes": [
 											{
 												"border": "pixel",
-												"current_border_width": 2,
 												"floating": "auto_off",
-												"geometry": {
-													"height": 2102,
-													"width": 1270,
-													"x": 0,
-													"y": 0
-												},
-												"name": "obs",
-												"percent": 0.414728682170543,
-												"swallows": [
+												"layout": "splitv",
+												"percent": 1,
+												"type": "con",
+												"nodes": [
 													{
-														"instance": "^pcmanfm$"
-													}
-												],
-												"type": "con"
-											},
-											{
-												"border": "pixel",
-												"current_border_width": 2,
-												"floating": "auto_off",
-												"geometry": {
-													"height": 2062,
-													"width": 2846,
-													"x": 6,
-													"y": 46
-												},
-												"name": "OBS 25.0.8-2 (linux) - Profile: Untitled - Scenes: Untitled",
-												"percent": 0.585271317829457,
-												"swallows": [
+														"border": "pixel",
+														"current_border_width": 2,
+														"floating": "auto_off",
+														"geometry": {
+															"height": 2072,
+															"width": 3840,
+															"x": 0,
+															"y": 42
+														},
+														"name": "#python-general - Discord",
+														"percent": 0.521883765100819,
+														"swallows": [
+															{
+																"instance": "^discord$"
+															}
+														],
+														"type": "con"
+													},
 													{
-														"instance": "^obs$"
+														"border": "pixel",
+														"floating": "auto_off",
+														"layout": "splith",
+														"percent": 0.478116234899181,
+														"type": "con",
+														"nodes": [
+															{
+																"border": "pixel",
+																"current_border_width": 2,
+																"floating": "auto_off",
+																"geometry": {
+																	"height": 2060,
+																	"width": 2196,
+																	"x": 0,
+																	"y": 0
+																},
+																"name": "downloads",
+																"percent": 1,
+																"swallows": [
+																	{
+																		"instance": "^pcmanfm$"
+																	}
+																],
+																"type": "con"
+															}
+														]
 													}
-												],
-												"type": "con"
+												]
 											}
 										]
 									}

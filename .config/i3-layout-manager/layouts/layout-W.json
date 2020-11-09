@@ -24,79 +24,14 @@
 							{
 								"border": "pixel",
 								"floating": "auto_off",
-								"layout": "splitv",
-								"percent": 0.743749999999999,
+								"layout": "splith",
+								"percent": 1,
 								"type": "con",
 								"nodes": [
 									{
 										"border": "pixel",
 										"floating": "auto_off",
-										"layout": "tabbed",
-										"percent": 1,
-										"type": "con",
-										"nodes": [
-											{
-												"border": "pixel",
-												"floating": "auto_off",
-												"layout": "tabbed",
-												"percent": 1,
-												"type": "con",
-												"nodes": [
-													{
-														"border": "pixel",
-														"current_border_width": 2,
-														"floating": "auto_off",
-														"geometry": {
-															"height": 2062,
-															"width": 2720,
-															"x": 6,
-															"y": 46
-														},
-														"name": "i3vm vertical split without tab - Google Search - Chromium",
-														"percent": 0.5,
-														"swallows": [
-															{
-																"instance": "^chromium$"
-															}
-														],
-														"type": "con"
-													},
-													{
-														"border": "pixel",
-														"current_border_width": 2,
-														"floating": "auto_off",
-														"geometry": {
-															"height": 2102,
-															"width": 1114,
-															"x": 2718,
-															"y": 4
-														},
-														"name": "Inbox (693 unread) — Evolution",
-														"percent": 0.5,
-														"swallows": [
-															{
-																"instance": "^evolution$"
-															}
-														],
-														"type": "con"
-													}
-												]
-											}
-										]
-									}
-								]
-							},
-							{
-								"border": "pixel",
-								"floating": "auto_off",
-								"layout": "tabbed",
-								"percent": 0.256250000000001,
-								"type": "con",
-								"nodes": [
-									{
-										"border": "pixel",
-										"floating": "auto_off",
-										"layout": "tabbed",
+										"layout": "splitv",
 										"percent": 1,
 										"type": "con",
 										"nodes": [
@@ -116,9 +51,28 @@
 														"nodes": [
 															{
 																"border": "pixel",
+																"current_border_width": 2,
 																"floating": "auto_off",
-																"layout": "tabbed",
-																"percent": 1,
+																"geometry": {
+																	"height": 2062,
+																	"width": 2846,
+																	"x": 6,
+																	"y": 46
+																},
+																"name": "i3wm - Google Search - Chromium",
+																"percent": 0.5,
+																"swallows": [
+																	{
+																		"instance": "^chromium$"
+																	}
+																],
+																"type": "con"
+															},
+															{
+																"border": "pixel",
+																"floating": "auto_off",
+																"layout": "splith",
+																"percent": 0.5,
 																"type": "con",
 																"nodes": [
 																	{
@@ -126,16 +80,16 @@
 																		"current_border_width": 2,
 																		"floating": "auto_off",
 																		"geometry": {
-																			"height": 600,
-																			"width": 800,
-																			"x": 0,
-																			"y": 0
+																			"height": 2102,
+																			"width": 1046,
+																			"x": 2788,
+																			"y": 6
 																		},
-																		"name": "Cher - Believe",
-																		"percent": 0.49058889303019,
+																		"name": "Inomoz_ultra - KeePassXC",
+																		"percent": 0.5,
 																		"swallows": [
 																			{
-																				"instance": "^spotify$"
+																				"instance": "^keepassxc$"
 																			}
 																		],
 																		"type": "con"
@@ -145,16 +99,16 @@
 																		"current_border_width": 2,
 																		"floating": "auto_off",
 																		"geometry": {
-																			"height": 1134,
-																			"width": 1600,
-																			"x": 2884,
-																			"y": 1060
+																			"height": 2072,
+																			"width": 3840,
+																			"x": 0,
+																			"y": 42
 																		},
-																		"name": "Inomoz_ultra - KeePassXC",
-																		"percent": 0.50941110696981,
+																		"name": "ьфшт.gnucash - Credit Card - GnuCash",
+																		"percent": 0.5,
 																		"swallows": [
 																			{
-																				"instance": "^keepassxc$"
+																				"instance": "^gnucash$"
 																			}
 																		],
 																		"type": "con"
