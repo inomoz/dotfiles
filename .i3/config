@@ -186,10 +186,10 @@ bindsym $mod+f workspace $ws10
 bindsym $mod+g workspace $ws11
 bindsym $mod+h workspace $ws12
 bindsym $mod+j workspace $ws13
-bindsym $mod+z workspace $ws15
-bindsym $mod+x workspace $ws16
-bindsym $mod+c workspace $ws17
-bindsym $mod+v workspace $ws18
+bindsym $mod+z workspace $ws14
+bindsym $mod+x workspace $ws15
+bindsym $mod+c workspace $ws16
+bindsym $mod+v workspace $ws17
 
 # Open applications on specific workspaces
 # assign [class="Thunderbird"] $ws1
