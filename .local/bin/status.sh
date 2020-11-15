@@ -31,12 +31,12 @@ weather=""
 
 update_rate() {
   rate=`curl 'https://api.ipify.org'`
-  weather=`curl wttr.in/Sinorovo?format="+\[%t\]\n"`
+  weather=`curl wttr.in/Sinorovo?format="+%t+%m+%w\n"`
 }
 
 i3status | (read line && echo "$line" && read line && echo "$line" && read line && echo "$line" && update_rate && while :
 do
   read line
   update_rate
-  echo ",[{\"full_text\":\"${weather} ${rate}\" },${line#,\[}" || exit 1
+  echo ",[{\"full_text\":\"${weather} | ${rate}\" },${line#,\[}" || exit 1
 done)
