@@ -115,12 +115,12 @@ bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
-bindsym $mod+h split h;exec notify-send 'tile horizontally'
-bindsym $mod+v split v;exec notify-send 'tile vertically'
+bindsym $mod+control+h split h;exec notify-send 'tile horizontally'
+bindsym $mod+control+v split v;exec notify-send 'tile vertically'
 #bindsym $mod+q split toggle
 
 # toggle fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+control+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+control+s layout stacking
@@ -137,7 +137,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+Shift+s sticky toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+bindsym $mod+control+a focus parent
 
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
@@ -160,8 +160,16 @@ set $ws3 3:e
 set $ws4 4:r
 set $ws5 5:t
 set $ws6 6:y
-set $ws7 7
-set $ws8 8
+set $ws7 7:a
+set $ws8 8:s
+set $ws9 9:d
+set $ws10 10:f
+set $ws11 11:g
+set $ws12 12:h
+set $ws13 13:z
+set $ws14 14:x
+set $ws15 15:c
+set $ws16 16:v
 
 # switch to workspace
 bindsym $mod+q workspace $ws1
@@ -170,19 +178,30 @@ bindsym $mod+e workspace $ws3
 bindsym $mod+r workspace $ws4
 bindsym $mod+t workspace $ws5
 bindsym $mod+y workspace $ws6
-bindsym $mod+7 workspace $ws7
-bindsym $mod+8 workspace $ws8
+bindsym $mod+a workspace $ws7
+bindsym $mod+s workspace $ws8
+bindsym $mod+d workspace $ws9
+bindsym $mod+f workspace $ws10
+bindsym $mod+g workspace $ws11
+bindsym $mod+h workspace $ws12
+bindsym $mod+z workspace $ws13
+bindsym $mod+x workspace $ws14
+bindsym $mod+c workspace $ws15
+bindsym $mod+v workspace $ws16
 
 # Open applications on specific workspaces
 # assign [class="Thunderbird"] $ws1
 # assign [class="Pale moon"] $ws2
 # assign [class="Pcanfm"] $ws3
-assign [class="Skype"] $ws4
-assign [class="Discord"] $ws4
-assign [class="Spotify"] $ws4
 assign [class="jetbrains-pycharm"] $ws1
 assign [class="Chromium"] $ws2
 assign [class="alacritty"] $ws3
+assign [class="Skype"] $ws4
+assign [class="discord"] $ws5
+assign [class="spotify"] $ws6
+assign [class="anydesk"] $ws7
+assign [class="krita"] $ws8
+assign [class="blender"] $ws9
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -217,10 +236,6 @@ for_window [class="Xfburn"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
-bindsym $mod+s exec --no-startup-id skypeforlinux
-bindsym $mod+d exec --no-startup-id discord
-bindsym $mod+z exec --no-startup-id "activate-chromium-tab.sh 1"
-bindsym $mod+control+z exec --no-startup-id "activate-chromium-tab.sh 2"
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -288,21 +303,11 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
 exec_always --no-startup-id sbxkb
-exec --no-startup-id xautolock -time 30 -locker blurlock
+exec --no-startup-id xautolock -time 40 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always setxkbmap -model pc104 -layout us,ru -variant us -option grp:alt_shift_toggle
-
-exec --no-startup-id pycharm
-exec --no-startup-id chromium
-exec --no-startup-id alacritty
-exec --no-startup-id skypeforlinux
-exec --no-startup-id discord
-exec --no-startup-id sleep 4 && spotify
-
-exec --no-startup-id i3-msg workspace '1:q' && layout_manager.sh q
-exec --no-startup-id i3-msg workspace '2:w' && layout_manager.sh w
-exec --no-startup-id i3-msg workspace '3:e' && layout_manager.sh e
+exec --no-startup-id ~/.local/bin/autostart.sh
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:

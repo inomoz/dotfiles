@@ -15,7 +15,7 @@ image/png=sxiv.desktop
 text/plain=nvim-qt.desktop
 x-scheme-handler/mailto=userapp-Evolution-2HLIS0.desktop
 message/rfc822=userapp-Thunderbird.desktop
-application/pdf=org.pwmt.zathura.desktop
+application/pdf=zathura.desktop
 application/x-bittorrent=deluge.desktop
 application/arj=xarchiver.desktop;
 multipart/x-zip=xarchiver.desktop;
@@ -187,6 +187,9 @@ image/x-xcursor=gimp.desktop;
 image/x-xpixmap=sxiv.desktop;gimp.desktop;
 image/x-xwindowdump=gimp.desktop;mage/tiff=sxiv.desktop;gimp.desktop;
 inode/directory=pcmanfm.desktop;
+application/ppdf=FoxitReader.desktop
+application/oxps=zathura.desktop
+application/epub+zip=zathura.desktop
 
 [Added Associations]
 x-scheme-handler/http=chromium.desktop;

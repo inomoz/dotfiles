@@ -36,7 +36,7 @@ memory {
 }
 
 volume master {
-	format = "[worQ / Web / Execute / chatteR]  %volume" 
+	format = " %volume" 
 	device = "default"
 	mixer = "Master"
 	mixer_idx = 0
