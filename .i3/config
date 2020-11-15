@@ -424,14 +424,14 @@ mode "move_windows" {
  bindsym a move container to workspace $ws7; workspace $ws7
  bindsym s move container to workspace $ws8; workspace $ws8
  bindsym d move container to workspace $ws9; workspace $ws9
- bindsym f move container to workspace $ws10; workspace $ws100
- bindsym g move container to workspace $ws11; workspace $ws111
- bindsym h move container to workspace $ws12; workspace $ws122
- bindsym j move container to workspace $ws13; workspace $ws133
- bindsym z move container to workspace $ws14; workspace $ws144
- bindsym x move container to workspace $ws15; workspace $ws155
- bindsym c move container to workspace $ws16; workspace $ws166
- bindsym v move container to workspace $ws17; workspace $ws177
+ bindsym f move container to workspace $ws10; workspace $ws10
+ bindsym g move container to workspace $ws11; workspace $ws11
+ bindsym h move container to workspace $ws12; workspace $ws12
+ bindsym j move container to workspace $ws13; workspace $ws13
+ bindsym z move container to workspace $ws14; workspace $ws14
+ bindsym x move container to workspace $ws15; workspace $ws15
+ bindsym c move container to workspace $ws16; workspace $ws16
+ bindsym v move container to workspace $ws17; workspace $ws17
  bindsym Return mode "default"
  bindsym Escape mode "default"
 }
