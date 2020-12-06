@@ -1,4 +1,4 @@
-# i3 config file (v4)
+# i config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
@@ -51,8 +51,8 @@ bindsym $mod+shift+o exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.
 bindsym $mod+o exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next && py3-cmd refresh spotify
 
 # Sound control
-bindsym $mod+i exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +4% && $refresh_i3status
-bindsym $mod+shift+i exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -4% && $refresh_i3status
+bindsym $mod+i exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1% && $refresh_i3status
+bindsym $mod+shift+i exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1% && $refresh_i3status
 bindsym $mod+control+u exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym $mod+control+i exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status_mic
 
@@ -89,7 +89,7 @@ no_focus [window_role="pop-up"]
 bindsym mod1+control+h focus left
 bindsym mod1+control+j focus down
 bindsym mod1+control+k focus up
-bindsym mod1+control+l focus right
+bindsym mod1+control+shift+h focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -167,10 +167,16 @@ set $ws10 10:f
 set $ws11 11:g
 set $ws12 12:h
 set $ws13 13:j
+set $ws13_1 13:k
 set $ws14 14:z
 set $ws15 15:x
 set $ws16 16:c
 set $ws17 17:v
+
+
+workspace $ws1 output DisplayPort-0
+workspace $ws2 output DisplayPort-0
+workspace $ws3 output HDMI-A-0
 
 # switch to workspace
 bindsym $mod+q workspace $ws1
@@ -186,6 +192,7 @@ bindsym $mod+f workspace $ws10
 bindsym $mod+g workspace $ws11
 bindsym $mod+h workspace $ws12
 bindsym $mod+j workspace $ws13
+bindsym $mod+k workspace $ws13_1
 bindsym $mod+z workspace $ws14
 bindsym $mod+x workspace $ws15
 bindsym $mod+c workspace $ws16
@@ -309,6 +316,7 @@ exec --no-startup-id xautolock -time 40 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always setxkbmap -model pc104 -layout us,ru -variant us -option grp:alt_shift_toggle
+exec_always ~/.screenlayout/main.sh
 exec --no-startup-id ~/.local/bin/autostart.sh
 
 # Color palette used for the terminal ( ~/.Xresources file )
@@ -347,9 +355,10 @@ bar {
 	i3bar_command i3bar
 	status_command ~/.local/bin/status.sh
 	position bottom
+	modifier Mod1
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
+	tray_output primary
 #	tray_output eDP1
 
 	bindsym button4 nop
@@ -428,6 +437,7 @@ mode "move_windows" {
  bindsym g move container to workspace $ws11; workspace $ws11
  bindsym h move container to workspace $ws12; workspace $ws12
  bindsym j move container to workspace $ws13; workspace $ws13
+ bindsym k move container to workspace $ws13; workspace $ws13_1
  bindsym z move container to workspace $ws14; workspace $ws14
  bindsym x move container to workspace $ws15; workspace $ws15
  bindsym c move container to workspace $ws16; workspace $ws16

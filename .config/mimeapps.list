@@ -190,6 +190,7 @@ inode/directory=pcmanfm.desktop;
 application/ppdf=FoxitReader.desktop
 application/oxps=zathura.desktop
 application/epub+zip=zathura.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-4YWBU0.desktop
 
 [Added Associations]
 x-scheme-handler/http=chromium.desktop;
@@ -206,3 +207,4 @@ application/x-extension-xht=chromium.desktop;
 x-scheme-handler/mailto=chromium.desktop;userapp-Evolution-2HLIS0.desktop;
 message/rfc822=chromium.desktop;
 image/png=org.kde.krita.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-4YWBU0.desktop;
