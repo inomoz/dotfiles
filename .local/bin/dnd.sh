@@ -1,28 +1,21 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-getargs() {
-  while getopts "se" opt
-  do
-    case $opt in
-      s) start="true";;
-      e) end="true";;
-    esac
-  done
-}
-start_dnd() {
-  notify-send "Do Not Disturb mode START.";
-  sleep 5
-  notify-send "DUNST_COMMAND_PAUSE";
-  touch /tmp/dnd.lock
-}
-end_dnd() {
-  notify-send "DUNST_COMMAND_RESUME";
-  notify-send "Do Not Disturb mode STOP. Notifications will be shown.";
-  rm -f /tmp/dnd.lock
-}
-main() {
-  getargs "$@";
-  [[ "$start" ]] && start_dnd;
-  [[ "$end" ]] && end_dnd;
-}
-main "$@"
+notify="notify-send -u low dunst"
+
+case `dunstctl is-paused` in
+    true)
+	rm -f /tmp/dnd.lock
+        $notify "Notifications are enabled"
+        dunstctl set-paused false
+        ;;
+    false)
+	touch /tmp/dnd.lock
+        $notify "Notifications are paused"
+        # the delay is here because pausing notifications immediately hides
+        # the ones present on your desktop; we also run dunstctl close so
+        # that the notification doesn't reappear on unpause
+        (sleep 3 && dunstctl close && dunstctl set-paused true) &
+        ;;
+esac
+
+sleep 2

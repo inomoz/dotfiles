@@ -1,4 +1,5 @@
 {
-    "bitrate": 8000,
-    "level": 42
+    "bitrate": 6000,
+    "level": 31,
+    "profile": 77
 }

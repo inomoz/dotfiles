@@ -14,18 +14,17 @@ general {
 	color_bad = "#CC1616"
 	color_degraded = "#55858E"
 	interval = 2
-    output_format = "i3bar"
+	output_format = "i3bar"
 }
 
-order += "volume master"
 order += "load"
-order += "cpu_usage"
 order += "memory"
 order += "disk /"
 order += "tztime local"
 #order += "ipv6"
 #order += "run_watch DHCP"
 #order += "run_watch VPN"
+#order += "volume master"
 order += "run_watch DUNST"
 #order += "wireless wlan0"
 
@@ -47,10 +46,6 @@ load {
 #	format = " Δ: %1min "
 	# termsyn font
 	format = "﬙ %1min %5min %15min"
-}
-
-cpu_usage {
-	format = "%usage"
 }
 
 cpu_temperature 0 {
@@ -81,17 +76,7 @@ disk "/" {
 	format = " %avail" 
 }
 
-wireless wlan0 {
-	format_up = " W: (%quality at %essid) %ip "
-	format_down = " ☡ WiFi "
-}
-
 ethernet eth0 {
-	# if you use %speed, i3status requires root privileges
-#	format_up =  " Ω: %ip  "
-#	format_down = " ∅ eth0  "
-
-	# termsyn font
 	format_up =  " ­ %ip "
 	format_down = " Ð eth0 "
 }
@@ -113,5 +98,5 @@ run_watch DUNST {
 tztime local {
 #	format = " %h-%d %H:%M ☰ "
 	# termsyn font
-	format = "  %h-%d %a %H:%M"
+	format = "  %h-%d %a %H:%M %Z"
 }

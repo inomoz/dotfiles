@@ -14,7 +14,7 @@
         "id": "pulse_input_capture",
         "mixers": 255,
         "monitoring_type": 0,
-        "muted": false,
+        "muted": true,
         "name": "Mic/Aux",
         "prev_ver": 436207618,
         "private_settings": {},
@@ -44,7 +44,7 @@
         "id": "pulse_output_capture",
         "mixers": 255,
         "monitoring_type": 0,
-        "muted": true,
+        "muted": false,
         "name": "Desktop Audio",
         "prev_ver": 436207618,
         "private_settings": {},
@@ -289,8 +289,8 @@
                     {
                         "align": 5,
                         "bounds": {
-                            "x": 1997.0,
-                            "y": 1090.0
+                            "x": 2697.0,
+                            "y": 1721.0
                         },
                         "bounds_align": 0,
                         "bounds_type": 2,
@@ -303,8 +303,8 @@
                         "locked": false,
                         "name": "Chromium",
                         "pos": {
-                            "x": 0.0,
-                            "y": -10.0
+                            "x": -182.0,
+                            "y": -348.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
@@ -340,7 +340,7 @@
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "settings": {
-                "capture_window": "79691779\r\nAnyDesk\r\nanydesk"
+                "capture_window": "41943047\r\nYnnigvarTV - Twitch - Chromium\r\nchromium"
             },
             "sync": 0,
             "versioned_id": "xcomposite_input",
