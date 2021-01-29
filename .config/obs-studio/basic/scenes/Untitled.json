@@ -16,7 +16,7 @@
         "monitoring_type": 0,
         "muted": true,
         "name": "Mic/Aux",
-        "prev_ver": 436207618,
+        "prev_ver": 436273152,
         "private_settings": {},
         "push-to-mute": false,
         "push-to-mute-delay": 0,
@@ -46,7 +46,7 @@
         "monitoring_type": 0,
         "muted": false,
         "name": "Desktop Audio",
-        "prev_ver": 436207618,
+        "prev_ver": 436273152,
         "private_settings": {},
         "push-to-mute": false,
         "push-to-mute-delay": 0,
@@ -70,6 +70,9 @@
             "non_matching_scene": "",
             "switch_if_not_matching": false,
             "switches": []
+        },
+        "decklink_captions": {
+            "source": ""
         },
         "output-timer": {
             "autoStartRecordTimer": false,
@@ -138,7 +141,7 @@
                     "monitoring_type": 0,
                     "muted": false,
                     "name": "Image Mask/Blend",
-                    "prev_ver": 436207618,
+                    "prev_ver": 436273152,
                     "private_settings": {},
                     "push-to-mute": false,
                     "push-to-mute-delay": 0,
@@ -165,7 +168,7 @@
                     "monitoring_type": 0,
                     "muted": false,
                     "name": "Luma Key",
-                    "prev_ver": 436207618,
+                    "prev_ver": 436273152,
                     "private_settings": {},
                     "push-to-mute": false,
                     "push-to-mute-delay": 0,
@@ -192,7 +195,7 @@
                     "monitoring_type": 0,
                     "muted": false,
                     "name": "Color Correction",
-                    "prev_ver": 436207618,
+                    "prev_ver": 436273152,
                     "private_settings": {},
                     "push-to-mute": false,
                     "push-to-mute-delay": 0,
@@ -218,7 +221,7 @@
             "monitoring_type": 0,
             "muted": false,
             "name": "Desktop",
-            "prev_ver": 436207618,
+            "prev_ver": 436273152,
             "private_settings": {},
             "push-to-mute": false,
             "push-to-mute-delay": 0,
@@ -239,15 +242,17 @@
                 "OBSBasic.SelectScene": [],
                 "libobs.hide_scene_item.Chromium": [],
                 "libobs.hide_scene_item.Desktop": [],
+                "libobs.hide_scene_item.Screen Capture (XSHM)": [],
                 "libobs.show_scene_item.Chromium": [],
-                "libobs.show_scene_item.Desktop": []
+                "libobs.show_scene_item.Desktop": [],
+                "libobs.show_scene_item.Screen Capture (XSHM)": []
             },
             "id": "scene",
             "mixers": 0,
             "monitoring_type": 0,
             "muted": false,
             "name": "Main Scene",
-            "prev_ver": 436207618,
+            "prev_ver": 436273152,
             "private_settings": {},
             "push-to-mute": false,
             "push-to-mute-delay": 0,
@@ -255,7 +260,7 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 3,
+                "id_counter": 4,
                 "items": [
                     {
                         "align": 5,
@@ -289,8 +294,8 @@
                     {
                         "align": 5,
                         "bounds": {
-                            "x": 2697.0,
-                            "y": 1721.0
+                            "x": 1920.0,
+                            "y": 1080.0
                         },
                         "bounds_align": 0,
                         "bounds_type": 2,
@@ -303,8 +308,37 @@
                         "locked": false,
                         "name": "Chromium",
                         "pos": {
-                            "x": -182.0,
-                            "y": -348.0
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": false
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 2,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 4,
+                        "locked": false,
+                        "name": "Screen Capture (XSHM)",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
@@ -333,7 +367,7 @@
             "monitoring_type": 0,
             "muted": false,
             "name": "Chromium",
-            "prev_ver": 436207618,
+            "prev_ver": 436273152,
             "private_settings": {},
             "push-to-mute": false,
             "push-to-mute-delay": 0,
@@ -344,6 +378,29 @@
             },
             "sync": 0,
             "versioned_id": "xcomposite_input",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "xshm_input",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Screen Capture (XSHM)",
+            "prev_ver": 436273152,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {},
+            "sync": 0,
+            "versioned_id": "xshm_input",
             "volume": 1.0
         }
     ],

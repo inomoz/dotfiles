@@ -20,12 +20,13 @@ general {
 order += "load"
 order += "memory"
 order += "disk /"
-order += "tztime local"
+#order += "tztime local"
 #order += "ipv6"
 #order += "run_watch DHCP"
 #order += "run_watch VPN"
 #order += "volume master"
 order += "run_watch DUNST"
+#order += "read_file CHARS"
 #order += "wireless wlan0"
 
 memory {
@@ -87,6 +88,10 @@ run_watch DHCP {
 
 run_watch VPN {
 	pidfile = "/var/run/vpnc/pid"
+}
+
+read_file CHARS {
+        path = "/tmp/grabbed"
 }
 
 run_watch DUNST {

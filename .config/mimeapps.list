@@ -190,6 +190,7 @@ application/oxps=zathura.desktop
 application/epub+zip=zathura.desktop
 x-scheme-handler/tg=userapp-Telegram Desktop-4YWBU0.desktop
 x-scheme-handler/discord-478576776990425110=discord-478576776990425110.desktop
+x-scheme-handler/webcal=chromium.desktop
 
 [Added Associations]
 x-scheme-handler/http=chromium.desktop;
