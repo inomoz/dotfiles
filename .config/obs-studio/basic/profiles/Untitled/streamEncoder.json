@@ -1,4 +1,5 @@
 {
-    "bitrate": 6600,
-    "rate_control": "CBR"
+    "bitrate": 10000,
+    "level": -99,
+    "profile": 77
 }
