@@ -91,7 +91,7 @@ no_focus [window_role="pop-up"]
 bindsym mod1+control+h focus left
 bindsym mod1+control+j focus down
 bindsym mod1+control+k focus up
-bindsym mod1+control+shift+h focus right
+bindsym mod1+control+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -217,6 +217,7 @@ assign [class="Inkscape"] $ws9
 assign [class="org.inkscape.Inkscape"] $ws9
 assign [class="Evolution"] $ws10
 assign [class="Steam"] $ws11
+assign [class="Zeal"] $ws12
 assign [class="keepassxc"] $ws13_1
 assign [class="KeePassXC"] $ws13_1
 assign [class="Virt-manager"] $ws13
@@ -330,7 +331,7 @@ exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 # exec --no-startup-id blueman-applet
 exec_always --no-startup-id sbxkb
-exec --no-startup-id xautolock -time 40 -locker blurlock
+exec --no-startup-id xautolock -time 40 -locker "xset -display :0.0 dpms force off"
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always setxkbmap -model pc104 -layout us,ru -variant us -option grp:alt_shift_toggle
