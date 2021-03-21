@@ -24,10 +24,17 @@ order += "disk /"
 #order += "ipv6"
 #order += "run_watch DHCP"
 #order += "run_watch VPN"
-#order += "volume master"
+order += "volume master"
 order += "run_watch DUNST"
 #order += "read_file CHARS"
 #order += "wireless wlan0"
+order += "ethernet enp3s0"
+
+ethernet enp3s0 {
+        format_up = ""
+        format_down = "down"
+}
+
 
 memory {
     format= " %available"

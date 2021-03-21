@@ -54,8 +54,8 @@ XTerm*selectToClipboard: true
 *color7:                          #d8d8d8
 *color15:                         #f8f8f8
 
-Xcursor.theme: xcursor-breeze
-Xcursor.size:                     32
+Xcursor.theme: macOSBigSur
+cursor.size:                     32
 
 URxvt.font: xft:Iosevka Nerd Font:pixelsize=33:antialias=true:hinting=true
 

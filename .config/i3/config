@@ -43,6 +43,7 @@ bindsym $mod+control+d exec --no-startup-id morc_menu
 #bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
+exec --no-startup-id ~/.screenlayout/main.sh
 #bindsym $mod+Ctrl+m exec pavucontrol
 bindsym $mod+n exec --no-startup-id dnd.sh && $refresh_i3status
 
@@ -52,10 +53,11 @@ bindsym $mod+shift+o exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.
 bindsym $mod+o exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next && py3-cmd refresh spotify
 
 # Sound control
-#bindsym $mod+i exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2% && $refresh_i3status
-#bindsym $mod+shift+i exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2% && $refresh_i3status
+bindsym $mod+i exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2% && $refresh_i3status
+bindsym $mod+shift+i exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2% && $refresh_i3status
+bindsym $mod+control+control+i exec pactl set-sink-mute 0 toggle # mute sound
 bindsym $mod+control+u exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym $mod+control+i exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status_mic
+#bindsym $mod+control+i exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status_mic
 
 
 ################################################################################################
@@ -78,10 +80,6 @@ bindsym Print exec --no-startup-id maim -s | xclip -selection clipboard -t image
 bindsym control+Print --release exec --no-startup-id maim -i $(xdotool getactivewindow) ~/pictures/screenshots/$(date +%s).png
 bindsym shift+Print --release exec --no-startup-id "maim -s /tmp/screenshot.png; imgur.sh /tmp/screenshot.png | xclip -selection clipboard"
 bindsym $mod+control+c --release exec --no-startup-id "maim -st 0 | convert - -resize 1x1\! -format '%[hex:p{0,0}]' info:-|xsel -ib"
-
-# force kill app
-#bindsym $mod+Ctrl+x exec clipmenu -i -nb '#002b36' -nf '#839496' -sb '#073642' -sf '#93a1a1'
-bindsym $mod+Ctrl+x exec clipmenu -i
 
 # focus_follows_mouse no
 focus_on_window_activation focus
@@ -179,6 +177,7 @@ set $ws17 17:v
 workspace $ws1 output DisplayPort-0
 workspace $ws2 output DisplayPort-0
 workspace $ws3 output HDMI-A-0
+workspace $ws13_1 output HDMI-A-0
 
 # switch to workspace
 
@@ -221,10 +220,13 @@ assign [class="Zeal"] $ws12
 assign [class="keepassxc"] $ws13_1
 assign [class="KeePassXC"] $ws13_1
 assign [class="Virt-manager"] $ws13
+assign [class="libreoffice"] $ws5
+for_window [class="libreoffice"] move container to workspace $ws5
 
 # Open specific applications in floating mode
 for_window [title="vlc"] i3-msg resize set 2000
 
+for_window [title="xprop"] floating enable border pixel 1
 for_window [title="rdesktop"] floating enable border pixel 1
 for_window [title="alsamixer"] floating enable border pixel 1
 for_window [class="calamares"] floating enable border normal
@@ -380,7 +382,7 @@ bar {
 	#modifier Mod1
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-	tray_output primary
+#	tray_output primary
 #	tray_output eDP1
 
 	bindsym button4 nop
